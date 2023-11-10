@@ -327,6 +327,7 @@ func (c *Client) Connect(ctx context.Context, cp *Connect) (*Connack, error) {
 			defer c.workers.Done()
 			defer c.debug.Println("returning from ack tracker routine")
 			t := time.NewTicker(sendAcksInterval)
+			defer t.Stop()
 			for {
 				select {
 				case <-c.stop:
