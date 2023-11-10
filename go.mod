@@ -1,4 +1,4 @@
-module github.com/eclipse/paho.golang
+module github.com/chriswalker-wm/paho.golang
 
 go 1.20
 
